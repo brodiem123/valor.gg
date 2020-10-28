@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang=''>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/navbar/navbar.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="/navbar/navbar-script.js"></script>
+    <title>VALOR.GG</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #homepage_image {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+            position: fixed;
+            transition: background-image 0.5s ease-in-out;
+            background-image: url("/images/background/logo-art-plain.jpg");
+            background-position: center top;
+            background-size: cover;
+
+        }
+
+        #homepage_image:hover {
+            background-image: url("/images/background/logo-art-plain-greyscale.jpg");
+        }
+
+        @media screen and (max-width: 1500px) {
+            #homepage_image {
+                background-image: url(/images/background/logo-art-plain-medium.jpg);
+                pointer-events: none;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            #homepage_image {
+                background-image: url(/images/background/logo-art-plain-small.jpg);
+                pointer-events: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id='cssmenu'>
+        <ul>
+            <li class='active'><a href='index.html'>Home</a></li>
+            <li><a href='/pages/agents.html'>Agents</a>
+                <ul>
+                    <li><a href='/pages/controller.html'>Controllers</a>
+                        <ul>
+                            <li><a href='/pages/agents/brimstone.html'>Brimstone</a></li>
+                            <li><a href='/pages/agents/omen.html'>Omen</a></li>
+                            <li><a href='/pages/agents/viper.html'>Viper</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href='/pages/duelist.html'>Duelist</a>
+                        <ul>
+                            <li><a href='/pages/agents/jett.html'>Jett</a></li>
+                            <li><a href='/pages/agents/phoenix.html'>Phoenix</a></li>
+                            <li><a href='/pages/agents/reyna.html'>Reyna</a></li>
+                            <li><a href='/pages/agents/raze.html'>Raze</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href='/pages/initiator.html'>Initiator</a>
+                        <ul>
+                            <li><a href='/pages/agents/breach.html'>Breach</a></li>
+                            <li><a href='/pages/agents/sova.html'>Sova</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href='/pages/sentinel.html'>Sentinel </a>
+                        <ul>
+                            <li><a href='/pages/agents/cypher.html'>Cypher</a></li>
+                            <li><a href='/pages/agents/killjoy.html'>Killjoy</a></li>
+                            <li><a href='/pages/agents/sage.html'>Sage</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li><a href='/pages/maps.html'>Maps</a>
+                <ul>
+                    <li><a href='/pages/maps/ascent.html'>Ascent</a>
+                    </li>
+                    <li><a href='/pages/maps/bind.html'>Bind</a>
+                    </li>
+                    <li><a href='/pages/maps/haven.html'>Haven </a>
+                    </li>
+                    <li><a href='/pages/maps/haven.html'>Split</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='/pages/patch-notes.html'>Patch Notes</a></li>
+            <li><a href='/pages/other.html'>Other</a></li>
+            <li><a href='/pages/feedback.html'>Feedback</a></li>
+        </ul>
+    </div>
+
+    <div id="homepage_image" class="shadow"></div>
+
+
+</body>
+<html>

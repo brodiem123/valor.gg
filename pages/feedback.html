@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang=''>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/navbar/navbar.css">
+
+    <title>VALOR.GG</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="/navbar/navbar-script.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDHGI4gJAdYU1LHcrCzabOjeMchlE3fAIk",
+            authDomain: "comments-section-e37f0.firebaseapp.com",
+            databaseURL: "https://comments-section-e37f0.firebaseio.com",
+            projectId: "comments-section-e37f0",
+            storageBucket: "comments-section-e37f0.appspot.com",
+            messagingSenderId: "747927384510",
+            appId: "1:747927384510:web:ea093ffe64a876b46989ef",
+            measurementId: "G-4HMJ7P93L1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+    </script>
+
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.1.0/js/md5.js"></script>
+    <script src="/comments.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: lightblue;
+            overflow: auto;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+
+        h1 {
+
+            text-align: center;
+            color: #3A4A5E;
+            font-size: 7vh;
+        }
+
+
+
+        h3 {
+            text-align: center;
+            color: #3A4A5E;
+            font-size: 2vh;
+            padding: 2vw;
+        }
+
+        h4 {
+            text-align: left;
+            color: white;
+            font-size: 2vh;
+            padding-left: 5vw;
+        }
+
+        h5 {
+            text-align: center;
+            color: #3A4A5E;
+            font-size: 2vh;
+        }
+
+
+        p {
+
+            text-align: left;
+            color: #3A4A5E;
+            font-size: 2vh;
+            padding-left: 6vw;
+            padding-right: 6vw;
+        }
+
+        .label {
+            padding: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id='cssmenu'>
+        <ul>
+            <li><a href='/pages/index.html'>Home</a></li>
+            <li><a href='/pages/agents.html'>Agents</a>
+                <ul>
+                    <li><a href='/pages/controller.html'>Controllers</a>
+                        <ul>
+                            <li><a href='/pages/agents/brimstone.html'>Brimstone</a></li>
+                            <li><a href='/pages/agents/omen.html'>Omen</a></li>
+                            <li><a href='/pages/agents/viper.html'>Viper</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href='/pages/duelist.html'>Duelist</a>
+                        <ul>
+                            <li><a href='/pages/agents/jett.html'>Jett</a></li>
+                            <li><a href='/pages/agents/phoenix.html'>Phoenix</a></li>
+                            <li><a href='/pages/agents/reyna.html'>Reyna</a></li>
+                            <li><a href='/pages/agents/raze.html'>Raze</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href='/pages/initiator.html'>Initiator</a>
+                        <ul>
+                            <li><a href='/pages/agents/breach.html'>Breach</a></li>
+                            <li><a href='/pages/agents/sova.html'>Sova</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href='/pages/sentinel.html'>Sentinel </a>
+                        <ul>
+                            <li><a href='/pages/agents/cypher.html'>Cypher</a></li>
+                            <li><a href='/pages/agents/killjoy.html'>Killjoy</a></li>
+                            <li><a href='/pages/agents/sage.html'>Sage</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li><a href='/pages/maps.html'>Maps</a>
+                <ul>
+                    <li><a href='/pages/maps/ascent.html'>Ascent</a>
+                    </li>
+                    <li><a href='/pages/maps/bind.html'>Bind</a>
+                    </li>
+                    <li><a href='/pages/maps/haven.html'>Haven </a>
+                    </li>
+                    <li><a href='/pages/maps/split.html'>Split</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='/pages/patch-notes.html'>Patch Notes</a></li>
+            <li><a href='/pages/other.html'>Other</a></li>
+            <li class="active"><a href='/pages/feedback.html'>Feedback</a></li>
+        </ul>
+    </div>
+
+    <h1>Feedback</h1>
+
+
+    <h3>Please use the form below to post feedback for the website's developer.</h3>
+    <h3 style="padding-bottom: 5vh"> All feedback is greatly appreciated.</h3>
+
+    <div class="container">
+        <form id="comment">
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+
+            <label for="name">Name</label>
+            <input type="text" id="name">
+
+            <label for="email">Email</label>
+            <input type="text" id="email">
+
+            <input type="submit" value="Post Comment">
+        </form>
+
+        <hr>
+
+        <div class="comments"></div>
+
+    </div>
+
+</body>
+<html>
